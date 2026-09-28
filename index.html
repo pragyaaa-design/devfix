@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevFix</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DevFix</h1>
+            <p class="subtitle">Development environment scanner &amp; diagnostic tool</p>
+        </header>
+
+        <button id="scanBtn" class="scan-btn">Run Scan</button>
+        <div id="loading" class="hidden">Scanning your environment...</div>
+
+        <section id="results" class="hidden">
+            <h2>Detected Tools</h2>
+            <div id="toolGrid" class="tool-grid"></div>
+
+            <h2>Issues Found</h2>
+            <div id="issueList"></div>
+
+            <button id="verifyBtn" class="verify-btn hidden">Re-scan &amp; Verify Fixes</button>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
